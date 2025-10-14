@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-0ea5e9?style=for-the-badge)](https://your-deployment-url.example.com)
 
-## Getting Started
+# Excaldraw Clone
 
-First, run the development server:
+A lightweight Excalidraw-like canvas editor built with Next.js and Fabric.js.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js (App Router)**
+- **React + TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui (Radix UI)**
+- **Lucide** (icons)
+- **Fabric.js v6.7.x**
+- **pnpm** (package manager)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Implemented Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Canvas editing**: select, pan, rectangles, circles, triangles, line, arrow, freehand, text
+- **Toolbar**: responsive with horizontal scroll on small screens
+- **Tool settings**: desktop panel and mobile drawer
+- **Zoom controls** and **history controls** (undo/redo)
+- **Theme switching** (light/dark/system) with workspace background sync
+- **Image import** via file picker (stored as data URLs for persistence)
+- **Persistence**: scene objects and editor state saved to browser storage
 
-## Learn More
+## Persistence (Temporary)
 
-To learn more about Next.js, take a look at the following resources:
+- The app currently persists data in **localStorage** only.
+- We separate and store:
+  - **Scene** (objects) at `excaldraw-clone:scene`
+  - **Editor state** (viewport, background color) at `excaldraw-clone:editor`
+- Images are stored as **data URLs** to avoid transient `blob:` issues and ensure reload reliability.
+- Note: localStorage has size limits; large scenes or many images may not fit.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Authentication**
+- **Dashboard**
+- **Admin dashboard**
+- **Service worker (offline)**
+- **Background sync when the user connects or creates an account**
+- **AI image generation**
+- **Splash images**
+- **Upload and display local media library**
