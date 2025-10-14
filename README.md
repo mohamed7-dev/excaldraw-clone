@@ -1,8 +1,19 @@
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-0ea5e9?style=for-the-badge)](https://your-deployment-url.example.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit-0ea5e9?style=for-the-badge)](https://excaldraw.vercel.app)
 
 # Excaldraw Clone
 
 A lightweight Excalidraw-like canvas editor built with Next.js and Fabric.js.
+
+> [!WARNING]
+> This project is a work in progress and is **not production-ready** yet. Persistence uses browser localStorage for now and may be cleared by the browser at any time. and you can face some issues with the editor.
+
+## Screenshots
+
+<div align="center">
+
+<img src="./public/screenshots/excaldraw-light.png" alt="Editor (Light)" width="600" />
+
+</div>
 
 ## Tech Stack
 
